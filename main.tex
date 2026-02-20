@@ -1,0 +1,295 @@
+\documentclass{article}
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+
+\begin{document}
+\title{Stochastic-Process-Exercise}
+\author{dashun gan}
+\date{October 2024}
+\maketitle
+\newpage
+
+
+\section*{第二章}
+\subsection*{1}
+重复地抛掷一枚均匀的硬币，抛掷结果为 $Y_0, Y_1, Y_2, \dots$，它们取值为 $0$ 或 $1$ 的概率均为 $1/2$，用 $X_n = Y_n + Y_{n-1}$ （$n \geq 1$）表示第 $(n-1)$ 次和第 $n$ 次抛掷出的结果中 $1$ 的个数。$X_n$ 是一个马尔可夫链吗？
+
+\vspace{3cm}
+\subsection*{2}
+小王家每天早晨都会收到报纸并且看完之后将它们堆放起来。每天傍晚，有人把所有堆起来的报纸拿走放到回收箱的概率为 $1/3$。另外，如果堆起来的报纸至少有 $5$ 张的话，小王将以概率 $1$ 把报纸放到回收箱中，考虑晚上堆起来的报纸数。
+
+求相应的状态空间和转移概率矩阵。
+\vspace{3cm}
+\subsection*{3}
+五个白球和五个黑球分散在两个罐子中，其中每个罐子中都有五个球。每一次我们各从两个罐子中随机抽取一个球并交换它们。用 $X_n$ 表示在时刻 $n$ 左边罐子中白球的个数。
+
+求 $X_n$ 的转移概率及对应的转移概率矩阵。
+\vspace{6cm}
+\subsection*{5}
+五个白球和五个黑球分散在两个罐子中，其中每个罐子中都有五个球。每一次我们各从两个罐子中随机抽取一个球并交换它们。用 $X_n$ 表示在时刻 $n$ 左边罐子中的白球的个数。
+
+求 $X_n$ 的转移概率及对应的转移概率矩阵。
+
+\vspace{3cm}
+\subsection*{8}
+一个出租车司机在机场 $A$ 和宾馆 $B$、宾馆 $C$ 之间按照如下方式行车：如果他在机场，那么下一时刻他将以等概率到达两个宾馆中的任意一个；如果他在其中一个宾馆，那么下一时刻他以概率 $3/4$ 返回机场，以概率 $1/4$ 开往另一个宾馆。
+
+假设时刻 $0$ 司机在机场，分别求出时刻 $2$ 司机在这三个可能地点的概率以及时刻 $3$ 他在宾馆 $B$ 的概率。
+\vspace{4cm}
+\subsection*{12}
+给出下列马尔可夫链的平稳分布，其转移矩阵为：
+\[
+\text{(a)} \quad 
+\begin{bmatrix}
+0.5 & 0.4 & 0.1 \\
+0.2 & 0.5 & 0.3 \\
+0.1 & 0.3 & 0.6
+\end{bmatrix}, \quad
+\text{(b)} \quad 
+\begin{bmatrix}
+0.5 & 0.4 & 0.1 \\
+0.3 & 0.4 & 0.3 \\
+0.2 & 0.2 & 0.6
+\end{bmatrix}, \quad
+\text{(c)} \quad 
+\begin{bmatrix}
+0.6 & 0.4 & 0 \\
+0.2 & 0.4 & 0.4 \\
+0 & 0.2 & 0.8
+\end{bmatrix}.
+\]
+
+\vspace{6cm}
+\subsection*{13}
+考虑状态空间为 $S = \{0, 1, \dots, 5\}$ 上的一个马尔可夫链，其转移概率矩阵为：
+\[
+\begin{bmatrix}
+0.5 & 0.5 & 0   & 0   & 0   & 0   \\
+0.3 & 0.7 & 0   & 0   & 0   & 0   \\
+0   & 0   & 0.1 & 0   & 0.9 & 0   \\
+0.25& 0.25& 0   & 0   & 0.25 & 0.25 \\
+0   & 0   & 0.7 & 0   & 0.3 & 0   \\
+0   & 0.2 & 0   & 0.2 & 0.2 & 0.4
+\end{bmatrix}
+\]
+\begin{enumerate}
+    \item 互通类有哪些？
+    \item 常返态有哪些？
+    \item 非常返态又有哪些？
+\end{enumerate}
+
+\vspace{5cm}
+\subsection*{15}
+一个大学提供三种类型的健康计划：A、B 和 C。经验显示，人们依照下面的转移概率矩阵改变健康计划：
+\[
+\begin{bmatrix}
+0.85 & 0.1 & 0.05 \\
+0.2 & 0.7 & 0.1 \\
+0.1 & 0.3 & 0.6
+\end{bmatrix}.
+\]
+在 2020 年，选择这三种计划的人员占的比例分别是 $30\%$、$25\%$ 和 $45\%$。
+\begin{enumerate}
+    \item 2021 年选择这三种计划的人员占的比例分别是多少？
+    \item 从长远来看，选择这三种计划的人员占的比例分别是多少？
+\end{enumerate}
+\pagebreak
+\section*{第四章习题}
+\subsection*{1}
+假设维修一台机器的时间可用一个服从均值为 2 的指数分布的随机变量来描述，请问：
+\begin{enumerate}
+    \item 维修机器花费的时间在 2 小时以上的概率是多少？
+    \item 在已知维修机器要花费 3 小时以上的条件下，花费的时间超过 5 小时的概率是多少？
+\end{enumerate}
+\vspace{3cm}
+\subsection*{2}
+一台收音机的寿命服从均值为 5 年的指数分布，如果购买一部已经使用了 7 年的收音机，那么它还能继续工作 3 年的概率是多少？
+\vspace{3cm}
+\subsection*{4}
+A 和 B 同时进入一家美容院，A 要修指甲，而 B 要理发。假定修指甲（理发）的时间服从均值为 20（30）分钟的指数分布，请问：
+\begin{enumerate}
+    \item A 先修完指甲的概率是多少？
+    \item 直到 A 和 B 都完成要花费的时间的期望是多少？
+\end{enumerate}
+\vspace{7cm}
+\subsection*{15}
+假定某品牌的灯泡次品率是 $1\%$。在装有 $25$ 个灯泡的产品中，运用泊松分布来近似计算最多有一个次品的概率。
+\vspace{3cm}
+\subsection*{16}
+假定 $N(t)$ 是速率为 $3$ 的泊松过程，令 $T_n$ 表示第 $n$ 个到达的时刻，求：
+\begin{enumerate}
+    \item $\mathbb{E}[T_{12}]$；
+    \item $\mathbb{E}[T_{12} \mid N(2) = 5]$；
+    \item $\mathbb{E}[N(5) \mid N(2) = 5]$。
+\end{enumerate}
+\vspace{4cm}
+\subsection*{18}
+假设某接听呼叫的服务台每小时接到的呼叫数是一个速率为 $4$ 的泊松过程。
+\begin{enumerate}
+    \item 在第一个小时内呼叫数少于 $2$ 个的概率是多少？
+    \item 假定在第一个小时内有 $6$ 个呼叫，求在第三个小时呼叫数少于 $2$ 个的概率。
+    \item 假定服务台的话务员接听 $10$ 个呼叫后需要休息一下，那么她的平均工作时间是多少？
+\end{enumerate}
+\vspace{7cm}
+\subsection*{23}
+事件按速率为每小时 $\lambda = 2$ 的泊松过程发生，请问：
+\begin{enumerate}
+    \item 在晚上 8 点到 9 点没有事件发生的概率是多少？
+    \item 从正午开始，到第 4 个事件发生的期望时间是多少？
+    \item 在晚上 6 点到 8 点有两个或两个以上事件发生的概率是多少？
+\end{enumerate}
+\vspace{6cm}
+\subsection*{26}
+一家保险公司的赔付数是一个速率为每周 $4$ 单的泊松过程。将“千元”简记为 $K$，假设每个保险单的赔付金额均值为 $10K$，标准差为 $6K$。求 $4$ 周赔付的总金额的均值和标准差。
+\pagebreak
+\pagebreak
+\section*{第五章习题}
+\subsection*{1}
+一小间办公室中有两个人进行股票共同基金的销售业务，他们每个人的状态有两
+种：要么在打电话，要么没在打电话。假设业务员$i$的通话时间服从速率为$\mu_i$的
+指数分布，没在打电话的时间服从速率为$\lambda_i$的指数分布。\\
+构建一个马氏链模型，状态空间为$\{0,1,2,12\}$，其中状态表示正在打电话的业务员。
+\vspace{6cm}
+\subsection*{3}
+考虑以下情况：有两台机器，仅有一位维修工人负责维修。机器$i$在发生故障前可正常工作的时间服从速率为$\lambda_i$的指数分布，每台机器的维修时间服从速率为$\mu_i$的指数分布，且维修工人依照机器发生故障的次序进行维修。\\
+$(a)$构建一个此情形下的马氏链，其状态空间为$\{0,1,2,12,21\}$;\\
+$(b)$假定$\lambda_1=1,\mu_1=2,\lambda_2=3,\mu_2=4,$求平稳分布。
+\vspace{8cm}
+\subsection*{6}
+一小间办公室中有两个人进行股票共同基金的销售业务，他们每个人的状态有两
+种：要么在打电话，要么没在打电话。假设业务员的通话时间均服从速率为$3$的指数分布，没在打电话的时间均服从速率为$1$的指数分布。\\
+$(a)$求平稳概率分布。\\
+$(b)$假定他们升级了电话系统，若打入的电话正在通话中，则转接到另一个电话，但若另一个电话也正在通话中，则打不进去电话，求新的平稳概率分布。
+\vspace{7cm}
+\subsection*{8}
+一台机器容易发生$i=1,2,3$三种故障，发生速率分别为$\lambda_i$，维修它们需要在费的时间服从速率为$\mu_i$的指数分布。\\
+构建一个状态空间为$\{0,1,2,3\}$的马氏链并求其平稳分布。
+\vspace{9cm}
+\subsection*{9}
+三只青蛙在池塘附近玩耍。当它们在地面上晒太阳时，它们觉得太热了，于是以速率1眺入池塘：当它们在池塘中时，它们觉得太冷了，于是以速率2跳回地面上。
+用$X_t$表示时刻$t$晒太阳的青蛙数。\\
+求$X_t$的平稳分布。
+\vspace{5cm}
+
+\pagebreak
+\section*{第六章习题}
+\subsection*{1}
+已知$W_t$是标准布朗运动，假设$X(t)=|W(t)|,t \ge 0$,求$\mathbb{E}X_t$和$VarX(t)$。
+\vspace{4cm}
+\subsection*{2}
+假设$W_t$是标准布朗运动，求：\\
+$(a)$ $\mathbb{P}[W(2)>3];$\\
+$(b)$ $\mathbb{P}[W(3)>W(2)]。$
+\vspace{3cm}
+\subsection*{3}
+假设$W_t$是标准布朗运动，求：\\
+$(a)$ $aW(s)+bW(t)$的分布，其中$a,b,s,t$均是实数，并且$0<s<t$;\\
+$(b)$ $\mathbb{P}[W(2)-2W(3) \le 4]。$
+\vspace{7cm}
+\subsection*{4}
+假设$W_t$是标准布朗运动，并且$0 \le u \le s \le t$,求：\\
+$(a)$ $\mathbb{E}[W^2(t)W^2(s)]$\\
+$(b)$ $\mathbb{E}[W(t)W(s)W(u)]。$
+\vspace{7cm}
+\subsection*{5}
+假设$W_t$是标准布朗运动，求$W(1)+W(2)+ \dots +W(n)$的分布。
+\pagebreak
+\section*{第六章}
+\subsection*{1}
+已知 $W(t)$ 是标准布朗运动，假设 $X(t) = |W(t)|, \; t \geq 0$，求 $\mathbb{E}[X(t)]$ 和 $\operatorname{Var}[X(t)]$。
+\vspace{5cm}
+\subsection*{2}
+假设 $W(t)$ 是标准布朗运动，求：
+\begin{enumerate}
+    \item $\mathbb{P}[W(2) > 3]$；
+    \item $\mathbb{P}[W(3) > W(2)]$。
+\end{enumerate}
+\vspace{2cm}
+\subsection*{3}
+假设 $W(t)$ 是标准布朗运动，求：
+\begin{enumerate}
+    \item $aW(s) + bW(t)$ 的分布，其中 $a, b, s, t$ 均是实数，并且 $0 < s < t$；
+    \item $\mathbb{P}[W(2) - 2W(3) \leq 4]$。
+\end{enumerate}
+\vspace{7cm}
+\subsection*{4}
+假设 $W(t)$ 是标准布朗运动，并且 $0 \leq u \leq s \leq t$，求：
+\begin{enumerate}
+    \item $\mathbb{E}[W^2(t)W^2(s)]$；
+    \item $\mathbb{E}[W(t)W(s)W(u)]$。
+\end{enumerate}
+\vspace{6cm}
+\subsection*{5}
+假设 $W(t)$ 是标准布朗运动，求 $W(1) + W(2) + \cdots + W(n)$ 的分布。
+\pagebreak
+\section*{第七章}
+\subsection*{1}
+令 $S_n = X_1 + X_2 + \cdots + X_n$，其中 $X_i$ 相互独立，并且 $\mathbb{E}[X_i] = 0, \; \operatorname{Var}(X_i) = \sigma^2$。
+
+证明：$S_n^2 - n\sigma^2$ 是一个鞅。
+\vspace{6cm}
+\subsection*{5}
+假设 $W(t)$ 是标准布朗运动，$\lambda$ 和 $v$ 均是实数，且 $v \geq 0$，令：
+\[
+X(t) = \exp[\lambda W(t) - vt]
+\]
+证明：当 $\lambda^2 = 2v$ 时，$X(t)$ 是一个鞅。
+\vspace{10cm}
+\subsection*{6}
+假设 $W(t)$ 是标准布朗运动，$X(t) = W(t) + \mu t$，令：
+\[
+M(t) = \exp[-2\mu X(t)]
+\]
+证明：$M(t)$ 是一个鞅。
+\vspace{7cm}
+\subsection*{7}
+假设 $W(t)$ 是标准布朗运动，令：
+\[
+M(t) = W^3(t) - 3tW(t)
+\]
+证明：$M(t)$ 是一个鞅。
+\vspace{6cm}
+\pagebreak
+\section*{第八章}
+\subsection*{10}
+已知 $X(t)$ 对应的随机微分方程如下：
+\[
+\mathrm{d}X(t) = -\frac{1}{2}\theta^2(t) \, \mathrm{d}t - \theta(t) \, \mathrm{d}W(t)
+\]
+其中，$W(t)$ 是标准布朗运动。
+
+求 $Z(t) = \exp[X(t)]$ 的随机微分方程。
+\vspace{8cm}
+\subsection*{11}
+已知 $X(t)$ 是一个 O-U 过程，其对应的随机微分方程如下：
+\[
+\mathrm{d}X(t) = -\kappa X(t) \, \mathrm{d}t + \sigma \, \mathrm{d}W(t)
+\]
+其中，$W(t)$ 是标准布朗运动。
+
+假设 $Y(t) = X^2(t)$，求 $Y(t)$ 的随机微分方程。
+\vspace{8cm}
+\subsection*{12}
+若
+\[
+\mathrm{d}X(t) = \mu X(t) \, \mathrm{d}t + \sigma X(t) \, \mathrm{d}W(t),
+\]
+求：
+\begin{enumerate}
+    \item $X^k(t)$ 的随机微分方程；
+    \item $X^{-1}(t)$ 的随机微分方程。
+\end{enumerate}
+\vspace{8cm}
+\subsection*{15}
+已知 $X(t)$ 服从几何均值回复过程（geometric mean-reverting process），其随机微分方程如下：
+\[
+\mathrm{d}X(t) = \kappa [\theta - \ln X(t)] X(t) \, \mathrm{d}t + \sigma X(t) \, \mathrm{d}W(t)
+\]
+求 $Y(t) = \ln X(t)$ 的随机微分方程。
+\pagebreak
+\end{document}
